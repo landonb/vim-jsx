@@ -24,7 +24,9 @@ setlocal indentexpr=GetJsxIndent()
 " JS indentkeys
 setlocal indentkeys=0{,0},0),0],0\,,!^F,o,O,e
 " XML indentkeys
-setlocal indentkeys+=*<Return>,<>>,<<>,/
+" 2017-10-16: [lb] doesn't like that commenting-out things triggers indenting.
+"setlocal indentkeys+=*<Return>,<>>,<<>,/
+setlocal indentkeys+=*<Return>,<>>,<<>
 
 " Multiline end tag regex (line beginning with '>' or '/>')
 let s:endtag = '^\s*\/\?>\s*;\='
